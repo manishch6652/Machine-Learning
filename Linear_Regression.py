@@ -1,4 +1,5 @@
 import pandas as pd
+import math
 import quandl #fiancial data python module
 df = quandl.get('WIKI/GOOGL') #google stock prices
 df = df[['Adj. Open','Adj. Low','Adj. High','Adj. Close','Adj. Volume']]
