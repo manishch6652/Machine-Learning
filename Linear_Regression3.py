@@ -13,6 +13,7 @@ df = df[['Adj. Close','HL_PCT','DL_PCT','Adj. Volume']]
 forecast_col = 'Adj. Close'
 df.fillna(-99999,inplace = True) #Fill NAN col values with -99999
 forecast_out = int(math.ceil(0.01*len(df)))
+prin(forecast_out)# no of days to predict in near future
 df['label'] = df[forecast_col].shift(-forecast_out) #forecasted value of stock
 df.dropna(inplace = True)
 X = np.array(df.drop(['label'],1))
