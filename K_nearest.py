@@ -16,7 +16,7 @@ clf.fit(x_train,y_train)
 accuracy = clf.score(x_test,y_test)
 print(accuracy)
 #predication 
-example_measures = np.array([[4,2,1,1,1,2,3,2,1],[4,2,1,1,1,2,3,2,1]])
-example_measures = example_measures.reshape(len(example_measures),-1)
-predication = clf.predict(example_measures)
-print(predication)
+example_measures = np.array([[1,4,2,1,1,1,2,3,2,1],[1,4,2,3,1,1,2,3,2,1]]) #we can add more also
+example_measures = example_measures.reshape(len(example_measures),-1) #len(example_measure)=1 if there is on list 2 becasue 2 list not needed but doing because of warning
+prediction = clf.predict(example_measures)
+print(prediction)
